@@ -28,7 +28,7 @@ const LoginPage = () => {
     setErrorMessage(null);
     try {
       // const session = await account.createEmailPasswordSession(email, password);
-      const user = await account.get();
+      //   const user = await account.get();
       //   setLoggedInUser(user);
     } catch (error) {
       if (error.code === 401) {
@@ -109,7 +109,7 @@ const LoginPage = () => {
                   <div className="text-xs  mt-4  flex flex-col gap-3">
                     <Link
                       href="/forgot-password"
-                      className="text-blue-500 underline"
+                      className="text-blue-500 underline hover:text-blue-600"
                     >
                       Forgot your password?
                     </Link>
@@ -123,19 +123,18 @@ const LoginPage = () => {
             </form>
           </CardContent>
           <CardFooter className="justify-center">
-          <div className="flex flex-row justify-center gap-4 p-4">
-            <p className="text-sm text-muted-foreground p-1">
-              Don't have an account?
-            </p>
-            <Link
-              to="/Signup"
-              className="text-sm font-semibold p-1 text-muted-foreground  text-blue-500 underline"
-            >
-              Sign Up
-            </Link>
-          </div>
+            <div className="flex flex-row justify-center gap-4 p-4">
+              <p className="text-sm text-muted-foreground p-1">
+                Don't have an account?
+              </p>
+              <Link
+                to="/Signup"
+                className="text-sm font-semibold p-1 text-muted-foreground  text-blue-500 underline"
+              >
+                Sign Up
+              </Link>
+            </div>
           </CardFooter>
-          
         </Card>
       </div>
       <div className="hidden lg:flex flex-1 items-center justify-center bg-primary p-8">
